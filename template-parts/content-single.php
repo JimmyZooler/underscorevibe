@@ -53,10 +53,11 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php underscorevibe_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
     </div> <!-- .floating-content -->
+    
+    <footer class="entry-footer">
+        <?php underscorevibe_entry_footer(); ?>
+    </footer><!-- .entry-footer -->
+    
 </article><!-- #post-## -->
 
