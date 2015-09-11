@@ -53,9 +53,6 @@ Layout: Content-Sidebar
 
 .entry-header,
 .entry-content,
-.entry-footer,
-.tag-links,
-.post-navigation,
 .comments-area {
     position: relative;
     max-width: 780px;
@@ -63,6 +60,21 @@ Layout: Content-Sidebar
     padding: 0 4rem;
     margin: 0 auto;
     float: left;
+}
+
+.post-navigation {
+    position: relative;
+    max-width: 780px;
+    max-width: 78rem;
+    padding: 0 4rem;
+    margin: 1rem auto 0;
+    float: left;
+}
+
+
+entry-footer li {
+    margin-top: 1rem;
+    overflow: auto;
 }
 
 
@@ -84,22 +96,31 @@ Layout: Content-Sidebar
 
 .tags {
     margin-left: 0;
-    margin-top: 0.5em;
+    margin-top: 1em;
     list-style-type: none;
 }
 
 .tags-items {
-    display: inline-block;
+display: inline-block;
+}
+
+.tags-items a {
     padding: 6px;
     margin-right: 4rem;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(0, 0, 0, 0.7);
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
 }
 
-.tags-items:hover {
-    background-color: #660066; /*#222;*/
+.tags-items a:hover {
+    border: 2px solid #660066; 
+    background: #000;
+    text-decoration: none;
+}
+
+.tags-items a:hover {
+    text-decoration: none;
     color: #fff;
 }
 
@@ -159,25 +180,10 @@ Layout: Content-Sidebar
 /*--- Customizations ---*/
 
 .floating-content {
-/*    float: left;*/
-/*    padding: 1rem;*/
     background-color: rgba(0, 0, 0, 0.7);
     overflow: auto;
     padding-bottom: 1rem;
     max-width: 780px;
 }
 
-/*.entry-meta:after {
-    content:".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}*/
-
-/*.post-navigation,
-.comments-area {
-    float: left;
-    display: block;
-}*/
 
