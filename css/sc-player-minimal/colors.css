@@ -1,6 +1,6 @@
 .sc-player {
-  font: 12px Arial, sans-serif;
-  color: #333;
+  font: 12px Open Sans, sans-serif;
+  color: #fff;
   font-size: 1.6em;
   line-height: 1.6em;
   font-weight: bold;
@@ -76,8 +76,8 @@
 }  
 
 .sc-scrubber .sc-time-indicators{
-  background: #fff;
-  color: #000;
+  background: purple;
+  color: #fff;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   padding: 2px;

@@ -23,6 +23,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'underscorevibe' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
+                             
                 <?php if ( get_header_image() && ('blank' == get_header_textcolor()) ) : ?>
                 <div class="header-image"
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -39,18 +40,41 @@
                     }
                     ?>                  
                     <div class="title-box">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
                     </div>
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-                        
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'underscorevibe' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-                        <?php underscorevibe_login_menu(); ?>
-                        <?php underscorevibe_signup_menu(); ?>
-		</nav><!-- #site-navigation -->
+                
 	</header><!-- #masthead -->
 
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+                        
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
+                    <div class="top-nav-container">
+                        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                        <div class="nav-logo">
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                                <img class="nav-logo-icon" src="http://localhost/wordpress/wp-content/uploads/2015/09/Viber-B8B8B8-Transparent.png">
+                                <img class="nav-logo-text" src="http://localhost/wordpress/wp-content/uploads/2015/09/Vibe-related_block_logo_c6c6c6.png">
+                            </a>
+                        </div>
+                    </div>
+                        
+        </nav><!-- #site-navigation -->
+        
 	<div id="content" class="site-content">
+<!--        <div id="hero-container">
+                <div id="hero">
+                    <img src="http://vibe-related.com/wp-content/uploads/2014/03/artists-picture-.jpg">
+                    <div id="hero-title">
+                        <h1>Hooty and Roy Explore Detroit</h1> 
+                        <button id="hero-button">
+                            Read More
+                        </button>
+                            
+                    </div>  hero-title 
+                </div>  hero 
+                <div id="hero-title">
+                    <h1> 
+                </div>  hero-title 
+            </div>  hero-container -->

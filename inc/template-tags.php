@@ -42,18 +42,20 @@ function underscorevibe_paging_nav() {
 		'current'  => $paged,
 		'mid_size' => 2,
 		'add_args' => array_map( 'urlencode', $query_args ),
-		'prev_text' => __( '← Previous', 'underscorevibe' ),
-		'next_text' => __( 'Next →', 'underscorevibe' ),
+		'prev_text' => __( '<i class="fa fa-arrow-left"></i>', 'underscorevibe' ),
+		'next_text' => __( '<i class="fa fa-arrow-right"></i>', 'underscorevibe' ),
                 'type'      => 'list',
 	) );
 
 	if ( $links ) :
 
 	?>
+        <div class="paging-nav-wrap">
 	<nav class="navigation paging-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'underscorevibe' ); ?></h1>
 			<?php echo $links; ?>
 	</nav><!-- .navigation -->
+        </div>
 	<?php
         endif;
 }

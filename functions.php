@@ -40,9 +40,9 @@ function underscorevibe_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
         add_image_size('large-thumb', 1060, 650, true);
-        add_image_size('index-thumb', 780, 250, true);
+        add_image_size('index-thumb', 300, 300, true);
         set_post_thumbnail_size('large-thumb', 1060, 650, true);
-        set_post_thumbnail_size('index-thumb', 780, 250, true);
+        set_post_thumbnail_size('index-thumb', 300, 300, true);
         
 
 	// This theme uses wp_nav_menu() in one location.
@@ -99,6 +99,32 @@ function underscorevibe_content_width() {
 add_action( 'after_setup_theme', 'underscorevibe_content_width', 0 );
 
 /**
+ * Create Custom Excerpt Length
+ */
+
+    remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+    add_filter('get_the_excerpt', 'custom_trim_excerpt');
+
+    function custom_trim_excerpt($text) { // Fakes an excerpt if needed
+    global $post;
+    if ( '' == $text ) {
+    $text = get_the_content('');
+    $text = apply_filters('the_content', $text);
+    $text = str_replace(']]>', ']]>', $text);
+    $text = strip_tags($text);
+    $excerpt_length = 24;
+    $words = explode(' ', $text, $excerpt_length + 1);
+    if (count($words) > $excerpt_length) {
+    array_pop($words);
+    array_push($words, '...');
+    $text = implode(' ', $words);
+    }
+    }
+    return $text;
+    }
+
+
+/**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
@@ -131,15 +157,19 @@ add_action( 'widgets_init', 'underscorevibe_widgets_init' );
  * Enqueue scripts and styles.
  */
 function underscorevibe_scripts() {
-	wp_enqueue_style( 'underscorevibe-style', get_stylesheet_uri() );
+//	wp_enqueue_style( 'underscorevibe-foundation', get_template_directory_uri() . '/css/foundation.css');
+    
+        wp_enqueue_style( 'underscorevibe-style', get_stylesheet_uri() );
         
         wp_enqueue_style('underscorevibe-content-sidebar', get_template_directory_uri() . '/layouts/content-sidebar.css');
         
-        wp_enqueue_style('underscorevibe-google-fonts', 'http://fonts.googleapis.com/css?family=Lato:400,100,400italic,700,900,900italic|PT+Serif:400,400italic,700,700italic|Open+Sans');
+        wp_enqueue_style('underscorevibe-google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|PT+Serif:400,400italic,700,700italic');
             
         wp_enqueue_style('underscorevibe-font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
         
-        wp_enqueue_script( 'underscorevibe-sc-player-minimal', get_template_directory_uri() . '/css/sc-player-minimal.css');
+        wp_enqueue_style( 'underscorevibe-sc-player-minimal', get_template_directory_uri() . '/css/sc-player-minimal.css');
+        
+        
         
         wp_enqueue_script( 'my-simone-superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '20150706', true );
                 
@@ -155,6 +185,10 @@ function underscorevibe_scripts() {
         
         wp_enqueue_script( 'underscorevibe-sc-player', get_template_directory_uri() . '/js/sc-player.js', array(), '20150909', true );
                            
+        wp_enqueue_script( 'underscorevibe-soundcloud-sdk', '//connect.soundcloud.com/sdk.js', array(), '20150910', true );
+
+        wp_enqueue_script( 'underscorevibe-sdk', get_template_directory_uri() . '/js/sdk.js', array(), '20150910', true );
+        
         wp_enqueue_script( 'my-simone-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20140401', true );
    
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
