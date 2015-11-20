@@ -1,5 +1,5 @@
 /*!
-Theme Name: Vibey Underscores
+Theme Name: Vibe Related
 Theme URI: http://underscores.me/
 Author: Craig Rushon
 Author URI: http://underscores.me/
@@ -176,7 +176,7 @@ input,
 optgroup,
 select,
 textarea {
-  color: #000;
+  color: #fff;
   font: inherit;
   margin: 0;
 }
@@ -271,7 +271,7 @@ button,
 input,
 select,
 textarea {
-  color: #333;
+  color: #fff;
   font-family: "PT serif",serif;
   font-size: 16px;
   font-size: 1.6rem;
@@ -420,10 +420,6 @@ input[type="submit"] {
     font-family: 'Open Sans';
     text-transform: uppercase;
     line-height: 1;
-    color: #000;
-    background: transparent;
-    border: 5px solid #000;
-    border-radius: 4px;
     cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
     -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 }
@@ -431,10 +427,10 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-    background: #1ABC9C;
+/*    background: #1ABC9C;
     border: 5px solid #1ABC9C;
     color: #fff;
-    
+    */
 }
 button:focus,
 input[type="button"]:focus,
@@ -507,35 +503,22 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 
-.top-nav-container {
-    width: 100%;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.8); /*#1C1036;*/
-/*    position: fixed;*/
-    box-shadow: 0 2px 3px rgba(90,90,90,0.4);
-    /*margin-top: 400px;*/
-}
-
-.top-nav-container a {
-/*    border-right: 1px solid rgba(0, 0, 0, 0.8);
-    border-left: 1px solid rgba(0, 0, 0, 0.8);*/
-}
 .menu-top-main-container {
     overflow: auto;
     display: inline-block;
     float: right;
+    clear: both;    
 }
 
 .main-navigation {
     position: relative;
-    float: left;
     width: 100%;
     display: block;
     clear: both;
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     text-transform: uppercase;
-/*    background: rgba(0, 0, 0, 0.8);*/
+    background: rgba(0, 0, 0, 0.8);
     z-index: 30;
     }
     
@@ -649,6 +632,7 @@ a:active {
 .menu-toggle {
 	cursor: pointer;
 	display: none;
+        background-color: #222;
 }
 
 .logo-vibe {
@@ -671,9 +655,18 @@ a:active {
 }
 
 @media screen and (max-width: 560px) {
-	.menu-toggle {
-            display: block;
-            height: 3.75em;
+        .menu-top-main-container {
+            width: 100%
+        }
+        
+        #primary-menu {
+            float: left;
+            width: 100%;
+        }
+    
+        .menu-toggle {
+            display: inline-block;
+            height: 3.80em;
             padding: 0 1em;
             font-weight: normal;
             font-size: 15px;
@@ -700,6 +693,23 @@ a:active {
             opacity: 1; 
         }
         
+        .nav-logo {
+            float: right;
+            display: inline;        
+        }
+        
+        .nav-logo a {
+            height: 57px;
+        }
+        
+        .nav-logo-icon {
+            margin-top: 0.35rem;
+        }
+
+        .nav-logo-text {
+           margin-top: 0.40rem;
+        }
+               
 	.main-navigation.toggled .nav-menu {
 		display: block;
 		border-top: 1px solid;
@@ -716,7 +726,7 @@ a:active {
 	}
 
 	.main-navigation li a { 
-		padding: 1.3em 2em; 
+		padding: 1.3em 2em;
 	}
 
 	.main-navigation li li a { 
@@ -730,6 +740,7 @@ a:active {
 	.main-navigation li:hover > a {
 		background: #fff;
 		background: hsl(0, 0%, 100%);
+                color: #222;
 	}
 	
 	.main-navigation ul ul,
@@ -915,7 +926,6 @@ a:active {
     position: relative;
     max-width: 780px;
     max-width: 78rem;
-    margin-right: 1em;
     float: right;
     font-size: 18px;
     font-size: 1.8rem;
@@ -931,6 +941,11 @@ a:active {
 
 .page-numbers a {
     background: rgba(0, 0, 0, 0.7);
+    font-size: 1.8rem !important;
+}
+
+.page-numbers {
+    font-size: 1.8rem !important;
 }
 
 .paging-nav-wrap {
@@ -970,6 +985,7 @@ a:hover.page-numbers {
     /*color: hsl(0, 0%, 90%);*/
     text-decoration: none;
     background-color: #eee;
+    font-size: 1.8rem !important;
 }
        
 
@@ -1111,6 +1127,7 @@ a:hover.page-numbers {
     font-size: 2rem;
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
+    margin-top: 1em;
 }
      
 .site-title a,

@@ -45,6 +45,6 @@
                 		
 	</footer> .entry-footer --> 
         
-    </div> <!-- .index-box -->
+    </div>  <!-- .index-box--> 
         <?php underscorevibe_entry_footer(); ?>
 </article><!-- #post-## -->

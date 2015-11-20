@@ -14,6 +14,10 @@ body {
     /*background: #f8fcf1;*/
 } 
 
+.site-main {
+    max-width: 810px;
+}
+
 #primary .single,
 #primary .post { 
     /*background: rgba(0, 0, 0, 0.6);*/
@@ -22,7 +26,7 @@ body {
 }
 
 .site-content .widget-area {
-    max-width: 24.0909%;
+    width: 270px;
     float: right;
     padding: 1rem;
     margin: 1rem;
@@ -115,7 +119,7 @@ entry-footer li {
     max-width: 100%;
     padding: 0;
     margin: 0;
-    overflow: auto;
+    overflow: hidden;
     /*background: #101010;*/
     clear: both;
     position: relative;
@@ -173,6 +177,7 @@ margin-top: 1rem;
     display: inline-block;
     transition: 0.2s;
     border-radius: 7px;
+    font-size: 1.6rem;
 }
 
 .tags-items a:hover { 
@@ -213,8 +218,8 @@ margin-top: 1rem;
     .content-area {
         width: 100%;
         float: left;
-        margin-right: -25.909%;
-        padding-right: 25.909%;
+        margin-right: -290px;
+        padding-right: 290px;
     }
     
     .entry-header,
@@ -233,32 +238,34 @@ margin-top: 1rem;
     
 }
 
-@media screen and (max-width: 750px) {  
+@media screen and (max-width: 1000px) {  
     .site-content .widget-area {
         display: none;
         float: none;
     }
-    
-       
     .content-area {
         padding-left: 0;
     }
     
 }
 
+@media screen and (max-width: 750px) {  
+     
+       
+    
+    
+}
+
 /*--- Customizations ---*/
 
-@media screen and (min-width: 750px) and (max-width: 1020px) {
-    .site-content .widget-area {
-        max-width: 24.0909%;
-    }
-    
+@media screen and (min-width: 1000px) and (max-width: 1020px) {
+       
     
     .content-area {
         width: 100%;
         float: left;
-        margin-left: -25.909%;
-        padding-left: 25.909%;
+        margin-left: -290px;
+        padding-left: 290px;
     }
 }
 
@@ -331,4 +338,5 @@ margin-top: 1rem;
     display: block;
     padding: 0.5rem 1rem 0.6rem;
     margin: 2rem 2rem 2rem 2rem;
+    max-width: 770px;
 }

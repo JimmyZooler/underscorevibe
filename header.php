@@ -49,32 +49,17 @@
 
         <nav id="site-navigation" class="main-navigation" role="navigation">
                         
-                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
-                    <div class="top-nav-container">
-                        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-                        <div class="nav-logo">
-                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                <img class="nav-logo-icon" src="http://localhost/wordpress/wp-content/uploads/2015/09/Viber-B8B8B8-Transparent.png">
-                                <img class="nav-logo-text" src="http://localhost/wordpress/wp-content/uploads/2015/09/Vibe-related_block_logo_c6c6c6.png">
-                            </a>
-                        </div>
-                    </div>
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
+            
+            <div class="nav-logo">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <img class="nav-logo-icon" src="http://localhost/wordpress/wp-content/uploads/2015/09/Viber-B8B8B8-Transparent.png">
+                    <img class="nav-logo-text" src="http://localhost/wordpress/wp-content/uploads/2015/09/Vibe-related_block_logo_c6c6c6.png">
+                </a>
+            </div>            
+                        
+            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
                         
         </nav><!-- #site-navigation -->
         
 	<div id="content" class="site-content">
-<!--        <div id="hero-container">
-                <div id="hero">
-                    <img src="http://vibe-related.com/wp-content/uploads/2014/03/artists-picture-.jpg">
-                    <div id="hero-title">
-                        <h1>Hooty and Roy Explore Detroit</h1> 
-                        <button id="hero-button">
-                            Read More
-                        </button>
-                            
-                    </div>  hero-title 
-                </div>  hero 
-                <div id="hero-title">
-                    <h1> 
-                </div>  hero-title 
-            </div>  hero-container -->
