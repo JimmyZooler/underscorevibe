@@ -1184,6 +1184,7 @@ a:hover.page-numbers {
     background: rgba(0, 0, 0, 0.8); /*#1C1036;*/
     padding: 0.5rem 1rem 0.6rem;
     margin-top: 0;
+    border-radius: 5px;
 }
 
 .widget a {
@@ -1216,6 +1217,7 @@ a:hover.page-numbers {
 
 .srp-post-content-container {
     background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
 }
 
 .srp-widget-singlepost {
@@ -1247,7 +1249,7 @@ a:hover.page-numbers {
 }
 
 .entry-title a:hover {
-    color: #1C1036;
+    color: #fff;
     
 }
 
@@ -1358,6 +1360,10 @@ a:hover.page-numbers {
         line-height: 1.5em;
     }
 
+    .entry-meta {
+        font-size: 30px;
+        font-size: 3rem;
+    }
 }
 
 /* Meta */
@@ -1379,10 +1385,9 @@ a:hover.page-numbers {
 }
 
 .entry-meta {
-    margin-bottom: 1rem;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: #909;
 }
 
@@ -1698,9 +1703,7 @@ Index and Archive
 }
 
 .continue-reading i:hover {
-    border-radius: 4px;
-    background: white;
-    color: #111;
+    color: #fff;
 }
                 
 
@@ -1783,8 +1786,7 @@ object {
 }
 
 .thumbnail-wrap {
-    margin-right: 2rem;
-    max-width: 50%;
+    width: 40%;
     
 }
 

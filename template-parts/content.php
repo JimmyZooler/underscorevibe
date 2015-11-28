@@ -21,7 +21,7 @@
         }
         ?>
                
-        <div class="entry-box clear">
+        <div class="entry-box pull-right">
             <div class="entry-meta">
                         <?php the_time('d.m'); ?>
             </div> <!-- .entry-meta -->
@@ -36,11 +36,12 @@
 
             <div class="entry-content">
                     <?php the_excerpt(); ?>
-                   <span class="continue-reading"> 
+            </div><!-- .entry-content -->
+            <span class="continue-reading"> 
                        <?php echo '<a href="' . get_permalink() . '" title="' . __('Continue Reading', 'underscorevibe') . get_the_title() . '" rel="bookmark">Read More <i class="fa fa-arrow-right"></i></a>'; ?>
                    </span>
-            </div><!-- .entry-content -->
         </div> <!-- .entry-box -->
+        
 <!--	<footer class="entry-footer">
                 		
 	</footer> .entry-footer --> 
