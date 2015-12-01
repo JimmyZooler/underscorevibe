@@ -63,14 +63,13 @@ body {
 }
 
 .entry-header {
-    position: absolute;
-    top: 41rem;
+    background: rgba(0, 0, 0, 0.9); 
+    border-radius: 5px;
+    display: block;
     max-width: 780px;
     max-width: 78rem;
     padding: 0 0rem;
-    margin: 0 0 1rem;
-    float: left;
-    background: rgba(0, 0, 0, 0.7);
+    margin: 2rem 0 1rem;
 }
 
 .entry-header h1 {
@@ -126,7 +125,7 @@ entry-footer li {
     /*background: #101010;*/
     clear: both;
     position: relative;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9); 
     border-radius: 5px;
 }
 
@@ -302,10 +301,11 @@ margin-top: 1rem;
 
 .floating-content {
     background-color: rgba(0, 0, 0, 0.7);
-    padding-bottom: 1rem;
+    padding:0 1rem;
     max-width: 780px;
     clear: both;
     position: relative;
+    margin-top: 2rem;
 }
 
 
@@ -364,7 +364,7 @@ margin-top: 1rem;
     line-height: 1.3em;
     /*color: #B8B8B8;*/
     text-transform: uppercase;
-    background: rgba(0, 0, 0, 0.8); 
+    background: rgba(0, 0, 0, 0.9); 
     display: block;
     padding: 0.5rem 1rem 0.6rem;
     max-width: 810px;

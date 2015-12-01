@@ -176,13 +176,7 @@ function underscorevibe_scripts() {
 	wp_enqueue_script( 'underscorevibe-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
         
         wp_enqueue_script( 'underscorevibe-jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js', array(), '20150909', true );
-        
-        wp_enqueue_script( 'underscorevibe-soundcloud.player.api', get_template_directory_uri() . '/js/soundcloud.player.api.js', array(), '20150909', true );
-        
-        wp_enqueue_script( 'underscorevibe-sc-player', get_template_directory_uri() . '/js/sc-player.js', array(), '20150909', true );
-                           
-        wp_enqueue_script( 'underscorevibe-soundcloud-sdk', '//connect.soundcloud.com/sdk.js', array(), '20150910', true );
-        
+                                                   
         wp_enqueue_script( 'my-simone-masonry', get_template_directory_uri() . '/js/masonry-settings.js', array('masonry'), '20140401', true );
    
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
